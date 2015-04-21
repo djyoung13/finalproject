@@ -55,14 +55,10 @@ void gameTime()
 	struct Room Room3;
 	struct Room Room4;
 	struct Room Room5;
-	struct Room Room6;
-	struct Room Room7;
-	struct Room Room8;
-	struct Room Room9;
 	struct Room hub;
 	
 	//The map has been set for the rooms.
-	Room map[3][3] = { { Room1, Room2, Room3 }, { Room4, Room5, Room6 }, { Room7, Room8, Room9 } };
+	Room map[3][2] = { { Room1, Room2 }, { Room3, Room4 }, { Room5, hub } };
 
 	//Each cluster of code creates the room, gives it a description, sets up the success/failure boolean, and gives an integer value
 	//for the row and column that the row is in. Each room will need a for loop setting all items in that room to 0 in the array.
@@ -95,30 +91,6 @@ void gameTime()
 	Room5.failure = false;
 	row = 1;
 	column = 1;
-
-	strcpy(Room6.description, "Description goes here");
-	Room6.success = false;
-	Room6.failure = false;
-	row = 1;
-	column = 2;
-
-	strcpy(Room7.description, "Description goes here");
-	Room7.success = false;
-	Room7.failure = false;
-	row = 2;
-	column = 0;
-
-	strcpy(Room8.description, "Description goes here");
-	Room8.success = false;
-	Room8.failure = false;
-	row = 2;
-	column = 1;
-
-	strcpy(Room9.description, "Description goes here");
-	Room2.success = false;
-	Room2.failure = false;
-	row = 2;
-	column = 2;
 
 	strcpy(hub.description, "Description goes here");
 	Room2.success = false;
