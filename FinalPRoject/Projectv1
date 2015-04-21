@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <gf_items.c>
 #include <string>
 #include <array>
 
@@ -46,7 +47,7 @@ struct Player
 	int power;
 };
 
-void gameTime()
+void gameCreate()
 {
 	//The rooms have been created with generic names, including a hub which exists outside of the main map.
 	//THe hub allows us to take the player out of the map matrix and allow them freedom to choose where to go next.
@@ -93,8 +94,8 @@ void gameTime()
 	column = 1;
 
 	strcpy(hub.description, "Description goes here");
-	Room2.success = false;
-	Room2.failure = false;
+	hub.success = false;
+	hub.failure = false;
 	row = -1;
 	column = -1;
 
@@ -107,5 +108,5 @@ void gameTime()
 
 int main()
 {
-	gameTime();
+	gameCreate();
 }
